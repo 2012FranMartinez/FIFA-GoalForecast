@@ -23,7 +23,7 @@ README.md: Información general sobre el proyecto.
 ## Cómo Empezar
 Clona este repositorio:
 
-[git clone https://github.com/tu_usuario/FIFA-GoalPredictor.git](https://github.com/2012FranMartinez/FIFA-GoalForecast.git)
+git clone https://github.com/2012FranMartinez/FIFA-GoalForecast.git
 
 Explora los notebooks y ejecuta el código para entrenar y evaluar los modelos de predicción.
 
