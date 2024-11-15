@@ -11,10 +11,14 @@ Generar visualizaciones y métricas que faciliten la interpretación de los resu
 
 ## 🧠 Estructura del Repositorio
 
-**data/**: Contiene los conjuntos de datos de FIFA.
+**data/**: Contiene los conjuntos de datos de FIFA y el dataframe con los partidos jugados, goles, asistencias y tarjetas.
+
 **notebooks/**: Notebooks de Jupyter con el análisis exploratorio de datos (EDA), la creación de modelos y el ajuste de parámetros.
+
 **src/**: Scripts de Python con el código modular para la preparación de datos, creación de modelos y predicción.
+
 **models/**: Modelos entrenados guardados para su reutilización y evaluación.
+
 README.md: Información general sobre el proyecto.
 
 ## 💻 Tecnologías Utilizadas
