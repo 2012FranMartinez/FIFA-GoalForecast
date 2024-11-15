@@ -12,6 +12,9 @@ from sklearn.metrics import mean_squared_error
 
 # Puedes agregar más casos de uso o métricas si lo deseas.
 
+# Título de la app
+st.title("Predicción de Goles en función del fifa stats")
+
 model_choice = st.selectbox("Selecciona el modelo", ['XGBoost', 'Regresión Lineal'])
 
 if model_choice == 'Regresión Lineal':
@@ -21,8 +24,6 @@ elif model_choice == 'XGBoost':
     with open('../models/ModeloSimpleFifa_best_xgb_model.pkl', 'rb') as file:
         modelo = pickle.load(file)
 
-# Título de la app
-st.title("Predicción de Goles con XGBoost")
 
 # Descripción
 st.write("""
@@ -57,6 +58,9 @@ from sklearn.preprocessing import StandardScaler
 # Mostrar separador
 st.write('-------------------------------')
 
+st.write('# Prediccion stats reales + stats fifa -> Goles reales')
+st.write('## Modelo simple de regresión lineal')
+
 # Cargar modelo de regresión lineal
 model_path_lr = '../models/Fifa-StatsReales_best_linear_model.pkl'
 with open(model_path_lr, 'rb') as file:
@@ -70,7 +74,6 @@ X_test_lr.index = range(1, len(X_test_lr) + 1)
 Y_test_lr.index = range(1, len(Y_test_lr) + 1)
 
 # Mostrar los DataFrames para inspección
-st.write('# Modelo regresión lineal')
 st.dataframe(X_test_lr)
 st.dataframe(Y_test_lr)
 
@@ -104,6 +107,8 @@ st.success(f"Predicción para {seleccion_lr}: {prediccion_entera_lr} goles")
 
 # Separador para la sección de Red Neuronal
 st.write('-------------------------------')
+st.write('# Prediccion stats reales + stats fifa -> Goles reales')
+st.write('## Modelo Red Neuronal')
 
 # Cargar modelo de red neuronal
 model_path_rn = '../models/Fifa-StatsReales_best_RN_model.pkl'
@@ -118,7 +123,6 @@ x_test_rn.index = range(1, len(x_test_rn) + 1)
 y_test_rn.index = range(1, len(y_test_rn) + 1)
 
 # Mostrar los DataFrames para inspección
-st.write('# Modelo Red Neuronal')
 st.dataframe(x_test_rn)
 st.dataframe(y_test_rn)
 
