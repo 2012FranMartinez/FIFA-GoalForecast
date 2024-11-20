@@ -1,6 +1,6 @@
 <h1 align="center">>>⚽️🥅 OctoBet-GoalForecast<< </h1>
 
-Este repositorio contiene un proyecto de predicción de goles basado en datos reales de jugadores y equipos de fútbol del año 2022. Utilizando técnicas de Machine Learning y análisis estadístico, el objetivo es construir modelos que puedan anticipar la cantidad de goles de un equipo o jugador bajo diferentes condiciones de juego.
+Este repositorio contiene un proyecto de predicción de goles basado en datos reales de jugadores de fútbol del año 2022. Utilizando técnicas de Machine Learning y análisis estadístico, el objetivo es construir modelos que puedan anticipar la cantidad de un jugador en ese año.
 
 ## 🎯 Objetivos del Proyecto
 
