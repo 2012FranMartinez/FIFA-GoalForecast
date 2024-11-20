@@ -6,10 +6,11 @@ Este repositorio contiene un proyecto de predicción de goles basado en datos re
 
 Este proyecto tiene como objetivo predecir goles en partidos de fútbol utilizando Machine Learning.
 
-Limpiar y explorar los datos de estadísticas de jugadores de 2022 para identificar características clave en la probabilidad de marcar goles.
-Desarrollar y entrenar modelos de predicción de goles con algoritmos de Machine Learning.
-Evaluar y comparar el rendimiento de los modelos para seleccionar el más preciso.
-Crear visualizaciones y métricas que ayuden a interpretar los resultados.
+-   Limpiar y explorar los datos de estadísticas de jugadores de 2022 para identificar características clave en la probabilidad de marcar goles.
+-   Desarrollar y entrenar modelos de predicción de goles con algoritmos de Machine Learning.
+-   Evaluar y comparar el rendimiento de los modelos para seleccionar el más preciso.
+-   Crear visualizaciones y métricas que ayuden a interpretar los resultados.
+
 Explora los notebooks y ejecuta el código para entrenar y evaluar los modelos.
 
 ## 🧠 Estructura del Repositorio
