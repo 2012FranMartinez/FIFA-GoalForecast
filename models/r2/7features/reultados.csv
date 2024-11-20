@@ -1,0 +1,42 @@
+,Model,Best_model,Best_params,Best_score,MSE,MAE,R-squared
+0,Linear Regression,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'scaler': StandardScaler()}",0.7812362752473941,0.5604002030628932,0.44761614358281576,0.8186365350979321
+1,Polynomial Regression_2,"Pipeline(steps=[('scaler', None),
+                ('polynomial', PolynomialFeatures(include_bias=False)),
+                ('pca', PCA()), ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'polynomial__degree': 2, 'scaler': None}",0.8090789778598364,0.4548531523551952,0.39884732661613165,0.8527949431818671
+2,Polynomial Regression_3,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(degree=3, include_bias=False)),
+                ('pca', PCA()), ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'polynomial__degree': 3, 'scaler': None}",0.7659116073483272,0.4694170032817804,0.401743048638343,0.8480816142931082
+3,Decision Tree,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('classifier',
+                 DecisionTreeRegressor(max_depth=5, min_samples_leaf=5,
+                                       min_samples_split=5))])","{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 5, 'classifier__min_samples_split': 5, 'scaler': StandardScaler()}",0.7193772486400445,0.6630770150275601,0.4323001888378465,0.7854070282540164
+4,Random Forest,"Pipeline(steps=[('scaler', None), ('pca', PCA()),
+                ('classifier',
+                 RandomForestRegressor(max_depth=10, min_samples_leaf=5,
+                                       min_samples_split=5, n_estimators=10,
+                                       random_state=42))])","{'classifier__max_depth': 10, 'classifier__min_samples_leaf': 5, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 10, 'scaler': None}",0.7502822799041207,0.6474736624492801,0.42259966983896574,0.7904567731902579
+5,XGBoost (Pipeline),"Pipeline(steps=[('scaler', None), ('pca', PCA()),
+                ('classifier',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=0.8, device=None,
+                              early_stopping_rounds=None,
+                              enable_categorical=False, eval_metric=None,
+                              feature_types=None, gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.1,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=6, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=10, n_jobs=None,
+                              num_parallel_tree=None, random_state=42, ...))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 6, 'classifier__n_estimators': 10, 'classifier__subsample': 0.8, 'scaler': None}",0.5997949242591858,1.2129611744686852,0.672407056096953,0.6074468493461609
+6,LightGBM (Pipeline),"Pipeline(steps=[('scaler', None), ('pca', PCA()),
+                ('classifier',
+                 LGBMRegressor(colsample_bytree=0.8, max_depth=10,
+                               n_estimators=10, random_state=42,
+                               subsample=0.8))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 10, 'classifier__n_estimators': 10, 'classifier__num_leaves': 31, 'classifier__subsample': 0.8, 'scaler': None}",0.6149259498954686,1.0828728149883455,0.6324965542651236,0.6495476541565398
+7,Neural Network,-,-,-,0.43982373384408235,0.38689433332520967,0.8576589226722717

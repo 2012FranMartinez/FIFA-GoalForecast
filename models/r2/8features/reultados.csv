@@ -1,0 +1,42 @@
+,Model,Best_model,Best_params,Best_score,MSE,MAE,R-squared
+0,Linear Regression,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'scaler': StandardScaler()}",0.7826389952794144,0.5567442180174,0.4404861545275897,0.8198197290223039
+1,Polynomial Regression_2,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('polynomial', PolynomialFeatures(include_bias=False)),
+                ('pca', PCA()), ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'polynomial__degree': 2, 'scaler': StandardScaler()}",0.7952659037086225,0.46934760102751255,0.3991696303825378,0.8481040750867289
+2,Polynomial Regression_3,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(degree=3, include_bias=False)),
+                ('pca', PCA()), ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'polynomial__degree': 3, 'scaler': None}",0.5201100419326332,1.044279005921699,0.45802948780972613,0.6620378475894467
+3,Decision Tree,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('classifier',
+                 DecisionTreeRegressor(max_depth=5, min_samples_leaf=5,
+                                       min_samples_split=5))])","{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 5, 'classifier__min_samples_split': 5, 'scaler': StandardScaler()}",0.7211988640771343,0.6623420878176067,0.4336718437278977,0.7856448742514295
+4,Random Forest,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier',
+                 RandomForestRegressor(max_depth=10, min_samples_leaf=2,
+                                       min_samples_split=10, n_estimators=10,
+                                       random_state=42))])","{'classifier__max_depth': 10, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 10, 'scaler': StandardScaler()}",0.7536794560872141,0.6769016468053902,0.4194221019548387,0.7809329343716109
+5,XGBoost (Pipeline),"Pipeline(steps=[('scaler', MinMaxScaler()), ('pca', PCA()),
+                ('classifier',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=0.8, device=None,
+                              early_stopping_rounds=None,
+                              enable_categorical=False, eval_metric=None,
+                              feature_types=None, gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.1,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=10, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=10, n_jobs=None,
+                              num_parallel_tree=None, random_state=42, ...))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 10, 'classifier__n_estimators': 10, 'classifier__subsample': 0.8, 'scaler': MinMaxScaler()}",0.6052868763605753,1.2140796925560724,0.6579964275363844,0.6070848703384399
+6,LightGBM (Pipeline),"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier',
+                 LGBMRegressor(colsample_bytree=0.8, max_depth=10,
+                               n_estimators=10, random_state=42,
+                               subsample=0.8))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 10, 'classifier__n_estimators': 10, 'classifier__num_leaves': 31, 'classifier__subsample': 0.8, 'scaler': StandardScaler()}",0.6161128843300917,1.0809269506960737,0.6393388197805984,0.6501773982007903
+7,Neural Network,-,-,-,0.49631294332862924,0.39600031010129233,0.839377224445343

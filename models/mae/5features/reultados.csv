@@ -1,0 +1,42 @@
+,Model,Best_model,Best_params,Best_score,MSE,MAE,R-squared
+0,Linear Regression,"Pipeline(steps=[('scaler', MinMaxScaler()), ('pca', PCA()),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'scaler': MinMaxScaler()}",-0.47511686895489913,0.5636644675444556,0.45083687194186445,0.8175801145015489
+1,Polynomial Regression_2,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('polynomial', PolynomialFeatures(include_bias=False)),
+                ('pca', PCA()),
+                ('classifier', ElasticNet(alpha=0.05, l1_ratio=0.05))])","{'classifier': ElasticNet(), 'classifier__alpha': 0.05, 'classifier__l1_ratio': 0.05, 'polynomial__degree': 2, 'scaler': StandardScaler()}",-0.4450891479806619,0.49920712732705363,0.4269134148196535,0.838440575465528
+2,Polynomial Regression_3,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(degree=3, include_bias=False)),
+                ('pca', PCA()),
+                ('classifier', ElasticNet(alpha=0.05, l1_ratio=0.05))])","{'classifier': ElasticNet(), 'classifier__alpha': 0.05, 'classifier__l1_ratio': 0.05, 'polynomial__degree': 3, 'scaler': None}",-0.4445794085210431,0.4820989187695927,0.4035192007020127,0.8439773400228744
+3,Decision Tree,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('classifier',
+                 DecisionTreeRegressor(max_depth=5, min_samples_leaf=5,
+                                       min_samples_split=5))])","{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 5, 'classifier__min_samples_split': 5, 'scaler': StandardScaler()}",-0.4547689303555738,0.6930772005184618,0.43863247723910054,0.7756980068107746
+4,Random Forest,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier',
+                 RandomForestRegressor(max_depth=10, min_samples_leaf=2,
+                                       min_samples_split=5, random_state=42))])","{'classifier__max_depth': 10, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 100, 'scaler': StandardScaler()}",-0.42722741819039084,0.6198837567969624,0.4072810897631031,0.7993857508352997
+5,XGBoost (Pipeline),"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=0.8, device=None,
+                              early_stopping_rounds=None,
+                              enable_categorical=False, eval_metric=None,
+                              feature_types=None, gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.05,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=4, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=200, n_jobs=None,
+                              num_parallel_tree=None, random_state=42, ...))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.05, 'classifier__max_depth': 4, 'classifier__n_estimators': 200, 'classifier__subsample': 0.8, 'scaler': StandardScaler()}",-0.4419983994193035,0.5328443685814308,0.4096039194802733,0.82755446434021
+6,LightGBM (Pipeline),"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier',
+                 LGBMRegressor(colsample_bytree=0.8, max_depth=6, num_leaves=50,
+                               random_state=42, subsample=0.8))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 6, 'classifier__n_estimators': 100, 'classifier__num_leaves': 50, 'classifier__subsample': 0.8, 'scaler': StandardScaler()}",-0.45685715380769626,0.5536655881435247,0.409482185513487,0.8208160723105921
+7,Neural Network,-,-,-,0.4918855323748948,0.3574415027020867,0.8408100605010986

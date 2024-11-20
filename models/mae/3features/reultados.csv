@@ -1,0 +1,43 @@
+,Model,Best_model,Best_params,Best_score,MSE,MAE,R-squared
+0,Linear Regression,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'scaler': StandardScaler()}",-0.47882783368664733,0.5749754774871623,0.46100562270262047,0.8139195091992328
+1,Polynomial Regression_2,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(include_bias=False, interaction_only=True)),
+                ('pca', PCA()),
+                ('classifier', ElasticNet(alpha=0.1, l1_ratio=0.1))])","{'classifier': ElasticNet(), 'classifier__alpha': 0.1, 'classifier__l1_ratio': 0.1, 'polynomial__degree': 2, 'polynomial__interaction_only': True, 'scaler': None}",-0.43931391329653835,0.5525739761801842,0.4217912977953881,0.8211693529249064
+2,Polynomial Regression_3,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(degree=3, include_bias=False)),
+                ('pca', PCA()),
+                ('classifier', ElasticNet(alpha=0.1, l1_ratio=0.1))])","{'classifier': ElasticNet(), 'classifier__alpha': 0.1, 'classifier__l1_ratio': 0.1, 'polynomial__degree': 3, 'polynomial__interaction_only': False, 'scaler': None}",-0.43301345880840614,0.5236009650724498,0.41905412300922185,0.8305459478198143
+3,Decision Tree,"Pipeline(steps=[('scaler', StandardScaler()),
+                ('classifier',
+                 DecisionTreeRegressor(max_depth=5, min_samples_leaf=5,
+                                       min_samples_split=5))])","{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 5, 'classifier__min_samples_split': 5, 'scaler': StandardScaler()}",-0.45425068530007273,0.6944819158532074,0.4397875116856709,0.7752433959114243
+4,Random Forest,"Pipeline(steps=[('scaler', None), ('pca', PCA()),
+                ('classifier',
+                 RandomForestRegressor(max_depth=5, min_samples_leaf=2,
+                                       min_samples_split=5, random_state=42))])","{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 100, 'scaler': None}",-0.4214647257700633,0.5410704433693253,0.40095569155343347,0.8248922647971526
+5,XGBoost (Pipeline),"Pipeline(steps=[('scaler', MinMaxScaler()), ('pca', PCA()),
+                ('classifier',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=0.8, device=None,
+                              early_stopping_rounds=None,
+                              enable_categorical=False, eval_metric=None,
+                              feature_types=None, gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.2,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=2, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=200, n_jobs=None,
+                              num_parallel_tree=None, random_state=42, ...))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.2, 'classifier__max_depth': 2, 'classifier__n_estimators': 200, 'classifier__subsample': 0.8, 'scaler': MinMaxScaler()}",-0.43087295030887757,0.5465622059562025,0.4220474700251489,0.8231149315834045
+6,LightGBM (Pipeline),"Pipeline(steps=[('scaler', None), ('pca', PCA()),
+                ('classifier',
+                 LGBMRegressor(colsample_bytree=0.6, max_depth=3,
+                               random_state=42, subsample=0.8))])","{'classifier__colsample_bytree': 0.6, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 3, 'classifier__n_estimators': 100, 'classifier__num_leaves': 31, 'classifier__subsample': 0.8, 'scaler': None}",-0.5029735841514641,0.677347226240814,0.4776472969862497,0.7807887305867873
+7,Neural Network,-,-,-,0.5189626398741053,0.3587003160796499,0.8320470452308655

@@ -1,0 +1,39 @@
+,Model,Best_model,Best_params,Best_score,MSE,MAE,R-squared
+0,Linear Regression,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=6)),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'pca__n_components': 6, 'scaler': StandardScaler()}",0.8410950867803104,0.33580030274598505,0.3760630628887791,0.8913242606117681
+1,Polynomial Regression_2,"Pipeline(steps=[('scaler', None),
+                ('polynomial', PolynomialFeatures(include_bias=False)),
+                ('pca', PCA(n_components=6)),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'pca__n_components': 6, 'polynomial__degree': 2, 'scaler': None}",0.6728969252525494,0.8411994587123428,0.596646546952753,0.7277608971731715
+2,Polynomial Regression_3,"Pipeline(steps=[('scaler', None),
+                ('polynomial',
+                 PolynomialFeatures(degree=3, include_bias=False)),
+                ('pca', PCA(n_components=6)),
+                ('classifier', LinearRegression())])","{'classifier': LinearRegression(), 'pca__n_components': 6, 'polynomial__degree': 3, 'scaler': None}",0.4696453494033287,1.4721652986994542,0.8299864532936608,0.5235601307397171
+3,Random Forest,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=6)),
+                ('classifier',
+                 RandomForestRegressor(max_depth=10, min_samples_leaf=2,
+                                       min_samples_split=5, n_estimators=10,
+                                       random_state=42))])","{'classifier__max_depth': 10, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 10, 'pca__n_components': 6, 'scaler': StandardScaler()}",0.8712782030301973,0.2786612781422816,0.23027109244550906,0.9098162801124982
+4,XGBoost (Pipeline),"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=6)),
+                ('classifier',
+                 XGBRegressor(base_score=None, booster=None, callbacks=None,
+                              colsample_bylevel=None, colsample_bynode=None,
+                              colsample_bytree=0.8, device=None,
+                              early_stopping_rounds=None,
+                              enable_categorical=False, eval_metric=None,
+                              feature_types=None, gamma=None, grow_policy=None,
+                              importance_type=None,
+                              interaction_constraints=None, learning_rate=0.1,
+                              max_bin=None, max_cat_threshold=None,
+                              max_cat_to_onehot=None, max_delta_step=None,
+                              max_depth=10, max_leaves=None,
+                              min_child_weight=None, missing=nan,
+                              monotone_constraints=None, multi_strategy=None,
+                              n_estimators=10, n_jobs=None,
+                              num_parallel_tree=None, random_state=42, ...))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 10, 'classifier__n_estimators': 10, 'classifier__subsample': 0.8, 'pca__n_components': 6, 'scaler': StandardScaler()}",0.6984809041023254,0.8222924513788789,0.5106123282244213,0.733879804611206
+5,LightGBM (Pipeline),"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=6)),
+                ('classifier',
+                 LGBMRegressor(colsample_bytree=0.8, max_depth=10,
+                               n_estimators=10, num_leaves=100, random_state=42,
+                               subsample=0.8))])","{'classifier__colsample_bytree': 0.8, 'classifier__learning_rate': 0.1, 'classifier__max_depth': 10, 'classifier__n_estimators': 10, 'classifier__num_leaves': 100, 'classifier__subsample': 0.8, 'pca__n_components': 6, 'scaler': StandardScaler()}",0.6814108008007835,0.8454007320957446,0.5114107230168969,0.7264012304677526
