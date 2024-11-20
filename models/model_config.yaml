@@ -1,0 +1,218 @@
+parameters:
+  scaler:
+    - StandardScaler
+    - MinMaxScaler
+    - null
+  # pca__n_components:
+  #   - null
+  #   - 10
+  #   - 0.95
+  classifier:
+    - LinearRegression
+grid_search:
+  cv: 10
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+# --------------------
+# --------------------
+parameters:
+  scaler:
+    - StandardScaler
+    - null
+    # - MinMaxScaler
+  polynomial:
+    degree:
+      - null # Grado especificado dinámicamente por el valor `grado`
+    # interaction_only:
+    #   - true
+    #   - false
+  pca:
+    # n_components:
+    #   - null
+    #   - 10
+    #   - 0.95
+  classifier:
+    - ElasticNet
+  classifier__alpha:
+    - [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14]
+  classifier__l1_ratio:
+    - [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14]
+grid_search:
+  cv: 5
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+# --------------------
+# --------------------
+parameters:
+  scaler:
+    - StandardScaler
+    - null
+    # - MinMaxScaler
+  classifier:
+    - DecisionTreeRegressor
+  classifier__max_depth:
+    - null
+    # - 10
+    # - 20
+    # - 30
+  classifier__min_samples_split:
+    - null
+    # - 2
+    # - 5
+    # - 10
+  classifier__min_samples_leaf:
+    - null
+    # - 1
+    # - 2
+    # - 5
+  classifier__max_features:
+    - null
+    # - auto
+    # - sqrt
+    # - log2
+grid_search:
+  cv: 5
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+# --------------------
+# --------------------
+parameters:
+  scaler:
+    - StandardScaler
+    - null
+    # - MinMaxScaler
+  classifier:
+    - RandomForestRegressor
+  classifier__n_estimators:
+    - 100
+  classifier__max_depth:
+    - null
+    # - 5
+    # - 10
+  classifier__min_samples_split:
+    - 5
+    # - 10
+  classifier__min_samples_leaf:
+    - 2
+    # - 5
+  pca__n_components:
+    - null
+    # - 5
+    # - 10
+    # - 0.95
+grid_search:
+  cv: 10
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+
+# --------------------
+# --------------------
+parameters:
+  scaler:
+    - StandardScaler
+    - null
+    # - MinMaxScaler
+  classifier:
+    - XGBRegressor
+  classifier__n_estimators:
+    - 100
+    # - 200
+  classifier__max_depth:
+    - 3
+    # - 5
+    # - 10
+  classifier__learning_rate:
+    - 0.1
+    # - 0.05
+    # - 0.2
+  classifier__subsample:
+    - 1.0
+    # - 0.8
+    # - 0.9
+  classifier__colsample_bytree:
+    - 1.0
+    # - 0.8
+  pca__n_components:
+    - null
+    # - 5
+    # - 10
+    # - 0.95
+grid_search:
+  cv: 5
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+# --------------------
+# --------------------
+parameters:
+  scaler:
+    - StandardScaler
+    - MinMaxScaler
+    - null
+  classifier:
+    - LGBMRegressor
+  classifier__n_estimators:
+    - 100
+  classifier__max_depth:
+    - 3
+    - 6
+    - 10
+  classifier__learning_rate:
+    - 0.01
+    - 0.1
+  classifier__subsample:
+    - 0.8
+  classifier__colsample_bytree:
+    - 0.6
+    - 0.8
+  classifier__num_leaves:
+    - 31
+    - 50
+    - 100
+  pca__n_components:
+    - null
+    # - 5
+    # - 10
+    # - 0.95
+grid_search:
+  cv: 3
+  scoring: neg_mean_absolute_error
+  verbose: 2
+  n_jobs: -1
+# --------------------
+# --------------------
+parameters:
+  scaling:
+    - StandardScaler
+  model:
+    - Dense:
+        units: 64
+        activation: relu
+        input_shape: X_train_scaled.shape[1:]
+    - Dense:
+        units: 32
+        activation: relu
+    - Dense:
+        units: 1
+  optimizer:
+    - Adam:
+        learning_rate: 0.001
+  loss:
+    - mean_absolute_error
+  metrics:
+    - mean_absolute_error
+  epochs:
+    - 50
+  batch_size:
+    - 32
+grid_search:
+  cv: null
+  scoring: null
+  verbose: null
+  n_jobs: null
+# --------------------
+# --------------------
