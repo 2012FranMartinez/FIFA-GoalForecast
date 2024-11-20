@@ -1,4 +1,4 @@
-<h1 align="center">>>⚽️🥅 FIFA-GoalForecast<< </h1>
+<h1 align="center">>>⚽️🥅 OctoBet-GoalForecast<< </h1>
 
 Este repositorio contiene un proyecto de predicción de goles basado en datos de jugadores y equipos del videojuego FIFA. Utilizando técnicas de Machine Learning y análisis estadístico, el objetivo es construir modelos que puedan anticipar la cantidad de goles de un equipo o jugador bajo diferentes condiciones de juego.
 
