@@ -154,8 +154,8 @@ def train_and_evaluate_polynomial_model(ruta_guardar, X_train, X_test, y_train, 
         # 'pca__n_components': [10, 0.95],
         # 'classifier': [Ridge(), Lasso(), ElasticNet()],
         'classifier': [ElasticNet()],
-        'classifier__alpha': [np.arange(0.05, 0.15, 0.01)].tolist(), # Valores entre 0.05 y 0.15, con un paso de 0.01
-        'classifier__l1_ratio': [np.arange(0.05, 0.15, 0.01)]
+        'classifier__alpha': np.arange(0.05, 0.15, 0.01).tolist(), # Valores entre 0.05 y 0.15, con un paso de 0.01
+        'classifier__l1_ratio': np.arange(0.05, 0.15, 0.01).tolist()
     }
     
     # Definir el espacio de búsqueda
